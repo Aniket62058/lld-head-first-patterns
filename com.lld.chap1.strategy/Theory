@@ -1,0 +1,25 @@
+Q. Why even used inheritance ? Could have gone with directly specific type of duck.
+1. Used inheritance because there could be same functionality among many ducks.
+2. Also while using or expressing duck behaviour i won't have to create specific type of duck object.
+    eg: List<Duck>
+    otherwise :
+        List<MallardDuck>
+        List<RubberDuck>
+        List<DecoyDuck>
+        List<RedheadDuck>
+
+Q. What problems faced with inheritance?
+1. If we are adding any new functionality, there is possibility that that functionality would not be
+   applicable for all child classes.
+   For eg :
+        All types of duck does not fly. Like RubberDuck, DecoyDuck
+        All types of duck does not quack. Like DecoyDuck, RubberDuck
+
+   So we will have to override that functionality across all child classes that does not support that functionality.
+   eg : @Override
+        public void fly() {} // in RedheadDuck and DecoyDuck
+
+2. While runtime we cannot change the behaviour.
+   Eg: If any duck got injured, that cannot swim.
+   But since we have gone with inheritance, it does not allow use to change at runtime
+
