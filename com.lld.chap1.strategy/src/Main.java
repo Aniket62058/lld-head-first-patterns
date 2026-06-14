@@ -12,10 +12,10 @@ public class Main {
 
         System.out.println();
 
-        duck1.quack();
-        duck2.quack();
-        duck3.quack();
-        duck4.quack();
+        duck1.performQuack();
+        if(duck2 instanceof Quackable) ((Quackable) duck2).quack();
+        if(duck3 instanceof Quackable) ((Quackable) duck3).quack();
+        if(duck4 instanceof Quackable) ((Quackable) duck4).quack();
 
         System.out.println();
 
@@ -26,10 +26,10 @@ public class Main {
 
         System.out.println();
 
-        duck1.fly();
-        duck2.fly();
-        duck3.fly();
-        duck4.fly();
+        duck1.performFly();
+        if(duck2 instanceof Flyable) ((Flyable) duck2).fly();
+        if(duck3 instanceof Flyable) ((Flyable) duck3).fly();
+        if(duck4 instanceof Flyable) ((Flyable) duck4).fly();
 
     }
 }

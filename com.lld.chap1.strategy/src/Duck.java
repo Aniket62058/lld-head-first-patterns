@@ -1,7 +1,6 @@
 public abstract class Duck {
-    public void quack() {
-        System.out.println(getClass().getSimpleName() + " Quacking");
-    }
+    protected FlyBehaviour flyBehaviour;
+    protected QuackBehaviour quackBehaviour;
 
     public void swim() {
         System.out.println(getClass().getSimpleName() + " Swim");
@@ -9,7 +8,11 @@ public abstract class Duck {
 
     public abstract void display();
 
-    public void fly() {
-        System.out.println(getClass().getSimpleName() + " fly");
+    public void performFly() {
+        flyBehaviour.fly();
+    }
+
+    public void performQuack() {
+        quackBehaviour.quack();
     }
 }

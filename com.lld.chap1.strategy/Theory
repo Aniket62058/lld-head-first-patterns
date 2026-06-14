@@ -23,3 +23,13 @@ Q. What problems faced with inheritance?
    Eg: If any duck got injured, that cannot swim.
    But since we have gone with inheritance, it does not allow use to change at runtime
 
+
+### Solution with Interface ##
+To solve this problem let's jump to interface and make Flyable and Quackable interface, whichever
+duck will have to fly or quack they can implement this.
+
+### Problem with Interface ###
+Now they is also one more issue with interface.
+Interface does not provide implementation, so the same fly code will duplicated across all the subclasses of Flyable interface.
+
+
